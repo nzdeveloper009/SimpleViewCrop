@@ -1,5 +1,7 @@
 plugins {
     alias(libs.plugins.android.library)
+    alias(libs.plugins.kotlin.android)
+    id("maven-publish")
 }
 
 android {
@@ -29,6 +31,29 @@ android {
         targetCompatibility = JavaVersion.VERSION_17
     }
 
+    kotlinOptions {
+        jvmTarget = "17"
+    }
+}
+
+afterEvaluate {
+    publishing {
+        publications {
+            create<MavenPublication>("maven") {
+                from (components["release"])
+                groupId = "com.github.nzdeveloper009"
+                artifactId = "SimpleViewCrop"
+                version = "1.0.0"
+                pom {
+                    description = "Simple View Crop"
+                }
+            }
+        }
+
+        repositories {
+            mavenLocal()
+        }
+    }
 }
 
 dependencies {
