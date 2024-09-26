@@ -43,7 +43,7 @@ afterEvaluate {
                 from (components["release"])
                 groupId = "com.github.nzdeveloper009"
                 artifactId = "SimpleViewCrop"
-                version = "1.0.0"
+                version = "1.0.1"
                 pom {
                     description = "Simple View Crop"
                 }
