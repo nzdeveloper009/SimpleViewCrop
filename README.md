@@ -21,7 +21,7 @@ dependencyResolutionManagement {
 Add the dependency
 ```
 dependencies {
-   implementation 'com.github.nzdeveloper009:SimpleViewCrop:1.0.0'
+   implementation 'com.github.nzdeveloper009:SimpleViewCrop:1.0.1'
 }
 ```
 
